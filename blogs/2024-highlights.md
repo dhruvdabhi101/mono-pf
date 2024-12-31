@@ -47,13 +47,10 @@ So here is the gist of it.
 ## What I will do in 2025
 - Lot of leetcode
 - Master C/C++ programming with computer architecture (become cracked)
-- Get goot at Fundamentals of Computer Science
+- Get good at Fundamentals of Computer Science
 - Learn to think from first principles
 
 
 ## Conclusion
 I have so much to improve, and so much to learn, amazing year it was, but i have to make 2025 more amazing.
 **Happy New Year**
-
-
-
