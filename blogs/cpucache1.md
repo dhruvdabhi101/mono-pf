@@ -47,7 +47,7 @@ Macbook Air M1 has following sizes of Caches
     * **Base M1**: 8 MB system level cache
 <br/>
 
-So, you might be asking, what are these performace and efficiency cores ? so in Apple laptops, they have 2 distinct types of cores,
+So, you might be asking, what are these performance and efficiency cores ? so in Apple laptops, they have 2 distinct types of cores,
 as self explanatory Performace cores are used for heavy-lifting whereas Efficiency cores are for light-weight tasks.
 
 # Memory Access Patterns
