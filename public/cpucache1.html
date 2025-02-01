@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDPZC0YPX6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RDPZC0YPX6');
+</script>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Dhruv Dabhi" />
+  <meta name="dcterms.date" content="2025-02-01" />
+  <title>CPU Caches - A gentle introduction</title>
+  <link rel="stylesheet" href="../reset.css" />
+  <link rel="stylesheet" href="../index.css" />
+</head>
+<body>
+<table class="header">
+  <tr>
+    <td colspan="2" rowspan="2" class="width-auto">
+      <h1 class="title">CPU Caches - A gentle introduction</h1>
+      <span class="subtitle">A small introduction to CPU caches</span>
+    </td>
+            <th>Version</th>
+    <td class="width-min">v0.1.1</td>
+          </tr>
+        <tr>
+    <th>Updated</th>
+    <td class="width-min"><time style="white-space: pre;">2025-02-01</time></td>
+  </tr>
+  <tr>
+    <th class="width-min">Author</th>
+    <td class="width-auto"><a href="https://dhruvdabhi.me"><cite>Dhruv
+Dabhi</cite></a></td>
+    <th class="width-min">License</th>
+    <td>MIT</td>
+  </tr>
+      </table>
+    <!--<label class="debug-toggle-label"><input type="checkbox" class="debug-toggle" /> Debug mode</label> -->
+<nav id="TOC" role="doc-toc">
+<h2 id="toc-title">Contents</h2>
+<ul class="incremental">
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#levels-of-caches" id="toc-levels-of-caches">Levels of
+Caches</a></li>
+<li><a href="#memory-access-patterns"
+id="toc-memory-access-patterns">Memory Access Patterns</a></li>
+</ul>
+</nav>
+<p><img
+src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfzMun3WQ-vE5Tzoc0gNqhJ0MO_5ijxXdwcz8lUJ37DuafaTbmLxpXos7UNkSSVFYOWQz1l4N2ewCGCauZ5PVx6cQIh8JUzZV4KrMTM6q3cZOh8STZRZpFlajXbmb4xT8op-uw14Q?key=A07JHKfQOkjMm4Snq1Ddkc8G" /></p>
+<h1 id="introduction">Introduction</h1>
+<p>Caches (System Level) are very little space of memories which is
+slower than registers and faster than RAM and secondary storage. They
+are used for retrieving data which is frequently used, to decrease the
+compute time of a program.</p>
+<p>Also, faster the memory, small it is, registers are smallest, there
+are only few (less than 100) general purpose registers in any Computer
+Architecture. Caches are in the range of KBs or as large as MBs.</p>
+<h1 id="levels-of-caches">Levels of Caches</h1>
+<p>Each processor has their caches. L1 and L2 caches are in every
+processor. L3 cache is shared cache, it is shared between all the
+processors.</p>
+<p>Macbook Air M1 has following sizes of Caches</p>
+<ul class="incremental">
+<li>L1 Cache
+<ul class="incremental">
+<li><strong>Performance Cores</strong>:
+<ul class="incremental">
+<li>Instruction cache: 192 KB per core</li>
+<li>Data cache: 128 KB per core</li>
+</ul></li>
+<li><strong>Efficiency Cores</strong>:
+<ul class="incremental">
+<li>Instruction cache: 128 KB per core</li>
+<li>Data cache: 64 KB per core</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><br/></p>
+<ul class="incremental">
+<li><p>L2 Cache</p>
+<ul class="incremental">
+<li><strong>Performance Cores</strong>: 12 MB shared L2 cache (for each
+group of four performance cores)</li>
+<li><strong>Efficiency Cores</strong>: 4 MB shared L2 cache</li>
+</ul></li>
+</ul>
+<p><br/></p>
+<ul class="incremental">
+<li>System Level Cache (SLC)
+<ul class="incremental">
+<li><strong>Base M1</strong>: 8 MB system level cache <br/></li>
+</ul></li>
+</ul>
+<p>So, you might be asking, what are these performace and efficiency
+cores ? so in Apple laptops, they have 2 distinct types of cores, as
+self explanatory Performace cores are used for heavy-lifting whereas
+Efficiency cores are for light-weight tasks.</p>
+<h1 id="memory-access-patterns">Memory Access Patterns</h1>
+<p><strong>So, on what basis processor decides what to store in the
+cache ?</strong></p>
+<p><strong>Temporal Locality</strong>: If some data is accessed, chances
+of that to be accessed again is high, so it stores in the cache.</p>
+<p>Let’s say, if some chef is preparing a multi-course meal, and he
+chopped some onion for one of the meals, and put it aside, and used it
+whenever he wanted. Chef avoids walking to the pantry again and again by
+reusing the same onion.</p>
+<p>Example: </p>
+<figure>
+<img src="../public/temporal.png" alt="Temporal Locality Example" />
+<figcaption aria-hidden="true">Temporal Locality Example</figcaption>
+</figure>
+<p><strong>Spatial Locality</strong>: so it follows the principle of
+spatial locality, which means, if we are accessing some data, data close
+to it will be accessed too.</p>
+<p>Let’s suppose, When you go to supermarket to buy ingredients for
+Pasta, the store has optimised the layout in such a way that, pasta,
+tomatoes, cheese are in adjacent aisles, reducing your time there.</p>
+<p>Example:</p>
+<figure>
+<img src="../public/spatial.png" alt="Spatial Locality Example" />
+<figcaption aria-hidden="true">Spatial Locality Example</figcaption>
+</figure>
+<p>Matrix Multiplication <img src="../public/matmulimg.png"
+alt="Matrix Multiplication Example" /></p>
+<p>In above code, I have done matrix multiplication in 2 ways,</p>
+<ul class="incremental">
+<li><p>Normal way, IJK,</p>
+<ul class="incremental">
+<li>i loop traverses over A matrix’s row.</li>
+<li>j loop traverses over B matrix’s column.</li>
+<li>k loop traverses over both A’s row and B’s column.</li>
+</ul></li>
+<li><p>What was happening was in <code>sum += A[i][k] * B[k][j];</code>,
+<code>k</code> is getting changed every iteration in inner most loop,
+which is happening most often, and we are changing row on every
+iteration, so CPU is not able to comply with spatial locality.</p></li>
+<li><p>If CPU thinks that, okay, <code>B[0][0]</code> is getting
+accessed right now, so <code>B[0][1]</code> and <code>B[0][2]</code>
+will also get accessed, so i should put them in cache, but it doesn’t
+happen, with our current logic <code>B[1][0]</code> will be accessed
+next.</p></li>
+<li><p>Other way, IKJ</p>
+<ul class="incremental">
+<li><p>same way as above,</p></li>
+<li><p>but the change is <code>k</code> is not changing often as
+before.</p></li>
+</ul></li>
+</ul>
+<p>Below is visualisation of Matrix Multiplication with <code>IKJ</code>
+format.</p>
+<p><video width="320" height="240" controls>
+<source src="../public/mm.mp4" type="video/mp4"> Your browser does not
+support the video tag. </video></p>
+<p>Result of above code is: <img src="../public/matmulresult.png"
+alt="Matrix Multiplication Result" /></p>
+<p>Also, there are two types of caches (based on what kind of stuff we
+are storing in the cache):</p>
+<ul class="incremental">
+<li><p>I-cache: Instruction cache</p>
+<ul class="incremental">
+<li>Suppose we are calling some function again and again, so that
+functions’ instructions get stored into cache.</li>
+</ul></li>
+<li><p>D-Cache: Data cache</p>
+<ul class="incremental">
+<li>As we did in the above example for Matrix Multiplication, we were
+storing data of array in cache.</li>
+</ul></li>
+</ul>
+<p>Let’s keep it till here in 1st part, this is just introduction, there
+is more to it. Like, what happens when the data we want is not in cache,
+what happens when cache is full and much more.</p>
+<p>In next part, we will see how cache is managed, how it is filled, how
+it is flushed, how it is invalidated, and much more.</p>
+  <div class="debug-grid"></div>
+  <script src="index.js"></script>
+</body>
+</html>

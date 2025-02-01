@@ -31,6 +31,8 @@ right now, i'm trying to learn assembly and computer architecture. i use vim btw
 </table>
 
 ## Blogs
+[CPU Caches - A Gentle Introduction](./public/cpucache1.html)
+
 [2024 Highlights](./public/2024-highlights.html)
 
 [Why you should have hobbies](./public/blog1.html)
