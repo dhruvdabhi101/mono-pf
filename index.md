@@ -18,6 +18,11 @@ right now, i'm trying to learn assembly and computer architecture. i use vim btw
 </thead>
 <tbody>
   <tr>
+    <td>[RISC-V Kernel](https://github.com/dhruvdabhi101/riscv-kernel)</td>
+    <td>RISC-V Kernel</td>
+    <td>Simple implementation of OS Kernel on RISC-V architecture</td>
+  </tr>
+  <tr>
     <td>[Rusty-Leaf](https://github.com/dhruvdabhi101/rusty-leaf-backend)</td>
     <td>Static Site Generator</td>
     <td>Rust, NextJS, Typescript</td>
