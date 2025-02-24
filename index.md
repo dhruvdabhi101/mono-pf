@@ -6,6 +6,17 @@ yo, i'm 20 y/o software engineer based in India, i love learning new languages, 
 
 right now, i'm trying to learn assembly and computer architecture. i use vim btw.
 
+<hr/>
+
+## Experience
+* Software Intern at [Silvertouch Technologies](https://www.silvertouch.com/) _(Jan 2025 - Current)_
+    * Worked on a project to automate the process of creating and managing the workflow of SAP Business tools.
+    * Using NextJS, NextAuth, Typescript
+
+* Software Developer at [Krewbee/Pleasentbiz](https://www.linkedin.com/company/krewbee) _(Feb 2024 - November 2024)_
+    * Built a platform for hostel management.
+    * Worked on a mobile application, used React-Native, Typescript
+
 
 ## Projects
 <table>
@@ -26,6 +37,11 @@ right now, i'm trying to learn assembly and computer architecture. i use vim btw
     <td>[mAIndmap](https://maindmap.xyz) [Github](https://github.com/dhruvdabhi101/mAIndmap)</td>
     <td>Tool to learn subjects with the use of AI generated Mindmaps</td>
     <td>NextJS, Typescript, Postgres, Prisma</td>
+  </tr>
+  <tr>
+    <td>[habitsu](https://habitsu.vercel.app)   [Github](https://github.com/dhruvdabhi101/habitsu)</td>
+    <td>Habit tracker</td>
+    <td>React, Typescript</td>
   </tr>
   <tr>
     <td>[Rusty-Leaf](https://github.com/dhruvdabhi101/rusty-leaf-backend)</td>
