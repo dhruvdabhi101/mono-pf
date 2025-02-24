@@ -19,13 +19,13 @@ right now, i'm trying to learn assembly and computer architecture. i use vim btw
 <tbody>
   <tr>
     <td>[RISC-V Kernel](https://github.com/dhruvdabhi101/riscv-kernel)</td>
-    <td>RISC-V Kernel</td>
     <td>Simple implementation of OS Kernel on RISC-V architecture</td>
+    <td>C, make</td>
   </tr>
   <tr>
     <td>[mAIndmap](https://maindmap.xyz) [Github](https://github.com/dhruvdabhi101/mAIndmap)</td>
-    <td>mAIndmap</td>
     <td>Tool to learn subjects with the use of AI generated Mindmaps</td>
+    <td>NextJS, Typescript, Postgres, Prisma</td>
   </tr>
   <tr>
     <td>[Rusty-Leaf](https://github.com/dhruvdabhi101/rusty-leaf-backend)</td>
