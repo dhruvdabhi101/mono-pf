@@ -23,6 +23,11 @@ right now, i'm trying to learn assembly and computer architecture. i use vim btw
     <td>Simple implementation of OS Kernel on RISC-V architecture</td>
   </tr>
   <tr>
+    <td>[mAIndmap](https://maindmap.xyz) [Github](https://github.com/dhruvdabhi101/mAIndmap)</td>
+    <td>mAIndmap</td>
+    <td>Tool to learn subjects with the use of AI generated Mindmaps</td>
+  </tr>
+  <tr>
     <td>[Rusty-Leaf](https://github.com/dhruvdabhi101/rusty-leaf-backend)</td>
     <td>Static Site Generator</td>
     <td>Rust, NextJS, Typescript</td>
